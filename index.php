@@ -17,6 +17,7 @@ city {
 
 <h2 class="city">paris</h2>
 <p class="city">paris is the capital of france.</p>
+<p class="city">one day you have to go to paris!</p>
 
 </body>
 </html>
