@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+    <title>My Little Journal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: Georgia, serif;
+            background: #fff9f3;
+            color: #33261f;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-family: arial, sans-serif;
+            color: #665b55;
+        }
+        .card {
+            padding: 28px;
+            margin-bottom: 16px;
+            border-radius: 18px;
+        }
+        .goal {
+            background: #ffe6a8;
+        }
+        .mood {
+            background: #ffd9e2;
+        }
+        .quote {
+            background: #e9f1d5;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        p {
+            font-family: arial, sans-serif;
+        }
+        input {
+            width: 75%;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            font-size: 15px;
+        }
+        button {
+            padding: 13px 20px;
+            border: none;
+            border-radius: 10px;
+            background: #e8a900;
+            color: white;
+            font-wight: bold;
+            cursor: pointer;
+        }
+        .moods {
+            display: flex;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .mood button {
+            flex: 1;
+            background: white;
+            color: #33261f;
+            font-size: 16px;
+        }
+        .mood button:hover {
+            background: #fff0f3;
+        }
+        #result {
+            font-weight: bold;
+            color: #b24c70;
+        }
+        footer {
+            background: #eadcf2;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            font-family: arial, sans-serif;
+            color: #665b6b;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 32px;
+            }
+            input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            .moods {
+                flex-wrap: wrap;
+            }
+            .mood button {
+                min-width: 45%;
+            }
+        }
+    </style>
+</head>  
+<body>
+    <div class="container">
+        <header>
+            <h1>My Little Journal</h1>
+            <p>A little progress each day adds up to big result.</p>
+        </header>
+    </div>
+    <div class="cardgoal">
+        <h2>Today's Goal</h2>
+        <p>
+            Focus on What matters and take small steps forward.
+        </p>
+        <input
+        type="text"
+        id="goalinput"
+        placeholder="Tuliskan Goal mu hari ini..."
+        >
+        <button onclick="saveGoal()">
+            Simpan Goal
+        </button>
+        <p id="goalresult"></p>
+    </div>
+
+    <div class="card mood">
+        <h2>Mood of the Day</h2>
+        <p>How are you feeling Today?</p>
+        <div class="moods">
+            <button
+    onclick="choosemood('Happy')">
+                        <br>Happy
+                    </button> 
+                    
+                    <button 
+    onclick="choosemood('calm')">
+                    <br>calm
+                </button> 
+                
+                <button
+    onclick="choosemood('tired')">
+                    <br>tired
+                </button> 
+                
+                <button
+    onclick="choosemood('overwhelmed')">
+                     <br>overwhelmed
+                       </button>            
+        </div>
+
+        <button onclick="savemood()">
+            simpan mood
+        </button>
+
+        <p id="result"></p>
+    </div>
+
+    <div class="card quote">
+        <h2>Daily quote</h2>
+        <p>A little reminder for your day.</p>
+
+        <div class="quote-text">
+            belive in your self and all that you are.
+            <br>
+            you are doing better than you think.
+        </div>
+    </div>
+
+    <footer>
+        take care of yourself
+        <br><br>
+        2026 my little journal
+    </footer>
+</div>
+
+<script>
+    let selectedmood = "";
+    function savegoal() {
+        let goal =arguments
+    document.getelementbyid("goalinput").value;
+    let result =
+    document.getelementbyid("goalinput");
+            if (goal === " ") {
+                result.textcontent =
+                "tulis goal kamu dulu ya"
+            }   else {
+                result.textcontent =
+                "goal tersimpan: " + goal +;
+            }
+    }
+</script>
+</body>  
+</html>
